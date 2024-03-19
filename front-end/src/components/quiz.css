@@ -1,0 +1,132 @@
+.container {
+    width: 640px;
+    background: white;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 40px 50px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.08);
+}
+
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header p{
+    color: #553f9a;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.container h2 {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-left: 15px;
+    border: 1px solid #686868;
+    border-radius: 8 px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+  
+.container button {
+    margin: auto;
+    width: 250px;
+    height: 65px;
+    background: #553f9a;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.301);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.301);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.301);
+}
+  
+.container .index {
+    margin: auto;
+    font-size: 18px;
+}
+.container .correct {
+    background: #dffff2;
+    border-color: #00d397;
+}
+.container .wrong {
+    background: #ffebeb;
+    border-color: #ff4a4a;
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adjust as needed for spacing */
+}
+  
+.container form div {
+    display: flex;
+    flex-direction: column;
+}
+  
+.container form label {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+  
+.container form input {
+    height: 40px;
+    border: 1px solid #686868;
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 18px;
+    outline: none;
+}
+
+.container form input:focus{
+    outline: #553f9a 2px solid;
+}
+  
+
+.container form button {
+    height: 50px;
+    font-size: 20px;
+    transition: all ease .5s;
+    margin-top: 10px;
+}
+
+.container form button:hover{
+    background-color: #D8C7FF;
+    color: #262626;
+}
+
+@media (max-width:768px){
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .container ul{
+        width: 100%;
+        padding: 0;
+        list-style: none;
+    }
+
+    .container ul li {
+        height: 60px;
+        padding-left: 10px;
+        cursor: pointer;
+        width: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+body {
+  height: 100%;
+  background: rgb(216,199,255);
+  background: linear-gradient(180deg, rgba(216,199,255,1) 0%, rgba(148,136,179,1) 52%);
+  font-family: "poppins";
+  padding: 0;
+  margin: 0;
+}
+
+.quiz-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  padding: 5%;
+}
+
+@media (max-width:768px){
+  .quiz-container{
+    margin: 50% 2%;
+    padding: 5% 2%;
+  }
+}
