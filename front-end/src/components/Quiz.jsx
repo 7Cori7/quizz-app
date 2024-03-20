@@ -12,6 +12,7 @@ export default function Quiz(){
     const [userDetails, setUserDetails] = useState({ name: "", email: "" });
     const [startQuiz, setStartQuiz] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [errMsg, setErrMsg] = useState(null);
 
     const Option1 = useRef(null);
     const Option2 = useRef(null);
@@ -30,7 +31,8 @@ export default function Quiz(){
               
             setLoading(true);
 
-            const apiUrl = 'http://localhost:3000/api/questions';
+            const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+            //const apiUrl = 'http://localhost:3000/api/questions';
 
             const response = await fetch(apiUrl);
 
@@ -58,6 +60,7 @@ export default function Quiz(){
 
             console.error("Error fetching questions:", error);
             setLoading(false);
+            setErrMsg(error.message);
           }
         }
       };
@@ -181,7 +184,9 @@ export default function Quiz(){
             <p>{userDetails.name}</p>
           </div>
           
-          { loading && <div style={{textAlign:'center', fontSize:'30px'}}>Loading⌛...please wait</div>}
+          { loading && <div style={{textAlign:'center', fontSize:'30px'}}>Loading⌛...please wait</div> }
+
+          { errMsg !== null && <div style={{textAlign:'center'}}>An Error Occurred ! ❌ {errMsg}</div> }
 
           {result ? (
             <>
