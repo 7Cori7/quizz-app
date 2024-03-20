@@ -33,7 +33,7 @@ export default function Quiz(){
 
             const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
-            const response = await fetch(`${apiUrl}/api/questions`);
+            const response = await fetch(`${apiUrl}/api/questions`); // || 'http://localhost:8000/api/questions'
 
             if (!response.ok) throw new Error("Failed to fetch");
 
