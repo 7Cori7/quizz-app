@@ -19,7 +19,7 @@ body {
 
 @media (max-width:768px){
   .quiz-container{
-    margin: 5% 2%;
-    padding: 5% 2%;
+    margin: 50% 2%;
+    padding: 50% 2%;
   }
 }
